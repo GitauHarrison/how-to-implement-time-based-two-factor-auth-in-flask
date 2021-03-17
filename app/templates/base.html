@@ -9,6 +9,19 @@
     {% endif %}
 {% endblock %}
 
+<!-- Head Section -->
+{% block head %}
+    {{ super() }}
+    <link rel="icon" type="image/png" href="{{url_for('static', filename = 'images/auth.png')}}">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+{% endblock %}
+
+<!-- Link Styles -->
+{% block styles %}
+    {{ super() }}
+    <link type="text/css" rel="stylesheet" href="{{ url_for('static', filename = 'css/styles.css') }}">
+{% endblock %}
 
 <!-- Navbar Section -->
 {% block navbar %}

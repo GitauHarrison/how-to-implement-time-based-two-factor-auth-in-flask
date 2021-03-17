@@ -2,9 +2,35 @@
 
 {% block app_content %}
         <div class="row">
-            <div class="col-md-12">
+            <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12 text-center">
                 <!-- title -->
                 <h1>Time-based OTP</h1>
             </div>
-        </div>              
+            <div class="col-sm-12 col-md-3 col-lg-3 col-xl-3 ">
+                <!-- Empty div -->
+            </div>
+            <div class="col-sm-12 col-md-6 col-lg-6 col-xl-6 ">
+                <p>
+                    To successfully test this application, you will need to do the following:
+                    <ul>
+                        <li>Have a Smartphone</li>
+                        <li>Have access to PlayStore or App Store </li>
+                    </ul>
+                </p>
+                <p>
+                    You can choose either of these applications to help with the QR Code scanning:
+                    <ul>
+                        <li><a href="https://play.google.com/store/apps/details?id=com.google.android.apps.authenticator2&hl=en_US&gl=US">Google Authenticator</a></li>
+                        <li><a href="https://play.google.com/store/apps/details?id=org.fedorahosted.freeotp&hl=en_US&gl=US">Free OTP</a></li>
+                    </ul>
+                    Or any other you may like!
+                </p>
+            </div>
+            <div class="col-sm-12 col-md-3 col-lg-3 col-xl-3 ">
+                <!-- Empty div -->
+            </div>
+        </div>
+        <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12 text-center">
+            <img class="img-fluid" style="max-width: 100%; height: auto;" src="{{ url_for('static', filename='images/2fa_flask.gif') }}">
+        </div>           
 {% endblock %}

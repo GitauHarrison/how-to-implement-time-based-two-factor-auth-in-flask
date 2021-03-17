@@ -59,7 +59,7 @@ def register():
         db.session.add(user)
         db.session.commit()
         session['username'] = user.username
-        flash('You have registered successfully. Please login to continue')
+        flash('You need to scan the QR code below to complete registration')
         return redirect(url_for('two_factor_setup'))
     return render_template('register.html',
                            title='Register',
