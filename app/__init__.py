@@ -11,7 +11,7 @@ db = SQLAlchemy(app)
 migrate = Migrate(app)
 bootstrap = Bootstrap(app)
 login = LoginManager(app)
-login.login_view = 'home'
+login.login_view = 'login'
 
 
 def start_ngrok():
