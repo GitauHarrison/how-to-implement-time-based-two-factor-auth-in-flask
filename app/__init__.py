@@ -15,9 +15,9 @@ login.login_view = 'home'
 
 
 def start_ngrok():
-    from pyngrok import ngork
+    from pyngrok import ngrok
 
-    url = ngork.connect(5000)
+    url = ngrok.connect(5000)
     print('* Tunnel: ', url)
 
 
