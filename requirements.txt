@@ -15,7 +15,9 @@ itsdangerous==1.1.0
 Jinja2==2.11.3
 Mako==1.1.4
 MarkupSafe==1.1.1
+onetimepass==1.0.1
 pyngrok==5.0.4
+PyQRCode==1.2.1
 python-dateutil==2.8.1
 python-dotenv==0.15.0
 python-editor==1.0.4
