@@ -13,4 +13,15 @@ bootstrap = Bootstrap(app)
 login = LoginManager(app)
 login.login_view = 'home'
 
+
+def start_ngrok():
+    from pyngrok import ngork
+
+    url = ngork.connect(5000)
+    print('* Tunnel: ', url)
+
+
+if app.config.get("ENV") == "development" and app.config["START_NGROK"]:
+    start_ngrok()
+
 from app import routes, models
