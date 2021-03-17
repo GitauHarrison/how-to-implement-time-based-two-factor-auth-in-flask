@@ -14,10 +14,10 @@
             <div class="col-sm-12 col-md-4 col-lg-4 col-xl-4 my-form">                                   
                 {{ wtf.quick_form(form) }}
                 <p>
-                    Forgot your Password? <span><a href="#">Reset Here</a></span>.
+                    Forgot your Password? <span><a href="{{ url_for('reset_password_request') }}">Reset Here</a></span>.
                 </p>
                 <p>
-                    New here? <span><a href="{{ url_for('register') }}">Register here</a></span>.
+                    New here? <span><a href="{{ url_for('register') }}">Register Here!</a></span>.
                 </p>                                            
             </div>
             <div class="col-sm-12 col-md-4 col-lg-4 col-xl-4">                
