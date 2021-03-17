@@ -10,7 +10,7 @@ from app.forms import LoginForm, RegistrationForm
 @app.route('/home')
 @login_required
 def home():
-    render_template('home.html', title='Home')
+    return render_template('home.html', title='Home')
 
 
 @app.route('/login', methods=['GET', 'POST'])

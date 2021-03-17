@@ -2,7 +2,7 @@ import os
 from dotenv import load_dotenv
 
 basedir = os.path.abspath(os.path.dirname(__file__))
-load_dotenv()
+load_dotenv(basedir, '.env')
 
 
 class Config(object):
@@ -14,5 +14,6 @@ class Config(object):
         'sqlite:///' + os.path.join(basedir, 'app.db')
     SQLALCHEMY_TRACK_MODIFICATIONS = False
 
+    # Localhost testing
     START_NGROK = os.environ.get('START_NGROK') is not None and \
         os.environ.get('WERKZEUG_RUN_MAIN') is not 'true'
