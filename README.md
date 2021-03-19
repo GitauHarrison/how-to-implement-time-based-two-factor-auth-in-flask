@@ -54,7 +54,35 @@ Search for and install freeOTP apps such as:
 
 ### Testing
 
-I have used `ngrok` for temporary provision of free public URLs which redirect to the application. Follow the steps below to test this application locally:
+I have used `ngrok` for temporary provision of free public URLs which redirect to the application. 
+
+For email configurations, I have used `Flask Mail`. The configurations for testing `Flask Mail` locally are:
+
+```python
+MAIL_SERVER = os.environ.get('MAIL_SERVER')
+MAIL_PORT = int(os.environ.get('MAIL_PORT') or 25)
+MAIL_USE_TLS = os.environ.get('MAIL_USE_TLS') is not None
+MAIL_USERNAME = os.environ.get('MAIL_USERNAME')
+MAIL_PASSWORD = os.environ.get('MAIL_PASSWORD')
+ADMINS = ['your-sender-email-address']
+```
+
+Upon deployment, I have resorted to using [Twilio SendGrid](https://sendgrid.com/). This means that the environment variables used to configure SendGrid will be slightly modified from our original `Flask Mail` configurations:
+
+```python
+MAIL_SERVER = os.environ.get('MAIL_SERVER')
+MAIL_PORT = int(os.environ.get('MAIL_PORT') or 25)
+MAIL_USE_TLS = os.environ.get('MAIL_USE_TLS') is not None
+MAIL_USERNAME = os.environ.get('MAIL_USERNAME')
+MAIL_PASSWORD = os.environ.get('SENDGRID_API_KEY')
+ADMINS = os.environ.get('MAIL_DEFAULT_SENDER')
+```
+
+* You will have to [create a Twilio SendGrid account](https://signup.sendgrid.com/). 
+* With an active account, you will then need to [create your SendGrid API keys](https://app.sendgrid.com/settings/api_keys).
+* Learn how to [integrate using SendGrid's API or SMTP Relay](https://app.sendgrid.com/guide/integrate/langs/smtp).
+
+Follow the steps below to test this application locally:
 
 1. Clone this repo:
 
