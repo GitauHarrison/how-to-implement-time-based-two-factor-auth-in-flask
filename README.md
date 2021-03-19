@@ -51,29 +51,48 @@ Search for and install freeOTP apps such as:
 
 1. [Google Authenticator](https://play.google.com/store/apps/details?id=com.google.android.apps.authenticator2&hl=en_US&gl=US)
 2. [FreeOTP Authenticator](https://play.google.com/store/apps/details?id=org.fedorahosted.freeotp&hl=en_US&gl=US)
+
 ### Testing
 
-I have used `ngrok` for temporary provision of free public URLs which redirect to the application. Follow the steps below to test this application:
+I have used `ngrok` for temporary provision of free public URLs which redirect to the application. Follow the steps below to test this application locally:
 
 1. Clone this repo:
 
 ```python
 $ git@github.com:GitauHarrison/how-to-implement-time-based-two-factor-auth-in-flask.git
 ```
+2. Move into the cloned directory:
 
-2. Create and activate your virtual environment:
+```python
+$ cd how-to-implement-time-based-two-factor-auth-in-flask
+```
+
+3. Create and activate your virtual environment:
 
 ```python
 $ mkvirtualenv flask_2fa
 ```
 
-3. Install dependencies used:
+4. Install dependencies used inside your virtual environment:
 
 ```python
 (flask_2fa)$ pip3 install -r requirements.txt
 ```
 
-4. Run flask server:
+5. Before you can run your server, remember to create a `.env` file following the guidance seen in the `.env.template`. Create a `.env` file in the root directory:
+
+```python
+(twilio_2fa)$ touch .env
+```
+
+6. Update the `.env` file with all the necessary details. Here is a sample:
+
+```python
+SENDGRID_API_KEY=
+MAIL_DEFAULT_SENDER=
+```
+
+7. Run flask server:
 
 ```python
 (flask_2fa)$ flask run
