@@ -42,7 +42,7 @@ if not app.debug and not app.testing:
         mail_handler = SMTPHandler(
             mailhost=(app.config['MAIL_SERVER'], app.config['MAIL_PORT']),
             fromaddr='noreply@' + app.config['MAIL_SERVER'],
-            toaddrs=app.config['ADMINS'],
+            toaddrs=app.config['MAIL_DEFAULT_SENDER'],
             subject='Flask 2fa Failure',
             credentials=auth, secure=secure
         )
