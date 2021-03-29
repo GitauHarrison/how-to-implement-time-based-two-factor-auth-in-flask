@@ -169,3 +169,4 @@ With the application up and running, click on:
 1. If you are new to flask, start [here](https://gitauharrison-blog.herokuapp.com/personal-blog).
 2. If you do not know what the command `mkvirtualenv` is, learn more [here](https://gitauharrison-blog.herokuapp.com/virtualenvwrapper).
 3. If you would prefer to understand more how I created this project, get the guide [here](https://github.com/GitauHarrison/notes/blob/master/two_factor_authentication/2fa_flask.md).
+4. I have used [Twilio SendGrid](https://sendgrid.com/) service to handle production level email requirements. If you would like to know more about how Twilio SendGrid is used, read more [here](https://github.com/GitauHarrison/notes/blob/master/twilio_sendgrid.md).
