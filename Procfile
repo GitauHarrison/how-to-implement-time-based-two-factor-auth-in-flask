@@ -1,1 +1,1 @@
-web: flask db upgrade; gunicorn --certfile cert.pem --keyfile key.pem -b 0.0.0.0:8000 auth:app
+web: flask db upgrade; gunicorn auth:app
