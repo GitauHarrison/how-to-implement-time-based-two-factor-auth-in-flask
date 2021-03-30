@@ -8,7 +8,6 @@ from config import Config
 import logging
 from logging.handlers import SMTPHandler, RotatingFileHandler
 import os
-from flask_sslify import SSLify
 
 app = Flask(__name__)
 app.config.from_object(Config)
@@ -18,7 +17,6 @@ login.login_view = 'login'
 db = SQLAlchemy(app)
 migrate = Migrate(app, db)
 mail = Mail(app)
-sslify = SSLify(app)
 
 
 def start_ngrok():
