@@ -31,7 +31,7 @@ def start_ngrok():
 if app.config.get("ENV") == "development" and app.config["START_NGROK"]:
     start_ngrok()
 
-if not app.debug and not app.testing:
+if not app.debug:
     if app.config['MAIL_SERVER']:
         auth = None
         if app.config['MAIL_USERNAME'] or app.config['MAIL_PASSWORD']:
