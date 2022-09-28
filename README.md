@@ -38,7 +38,8 @@ The idea behind one-time passwords is that they are valid for only one login ses
 
 ### Deployed Application
 
-* [Simple 2fa App](https://simple-2fa.herokuapp.com/login?next=%2Fhome)
+* [Simple 2fa App](https://simple-2fa.herokuapp.com/login?next=%2Fhome) - Heroku
+* [Simple 2fa app](https://simple-2fa.onrender.com) - Render
 
 ### Requirements
 
